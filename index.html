@@ -1,0 +1,22 @@
+<html>
+<ul id="list"></ul>
+<button id="button">reveal next fruit</button>
+<script>
+var fruits;
+
+
+fruits = ['apple', 'orange', 'cherry'];
+
+
+document.getElementById('button').addEventListener('click', (event) => {
+  let element_list = document.getElementById('list');
+  if (!!fruits.length) {
+    let new_li = document.createElement('li');
+    new_li.innerText = fruits.shift();
+
+    element_list.appendChild(new_li);
+  }
+
+});
+</script>
+</html>
